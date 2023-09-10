@@ -5,7 +5,7 @@ public class Main {
 
 //      1. 조건문 - if
         System.out.println("== if ==");
-
+        System.out.println();
 
 
 //      2. 조건문 - switch
