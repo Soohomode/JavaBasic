@@ -1,7 +1,38 @@
 
 public class Practice5 {
     public static int solution(int[] ratings) {
-        return 0;
+
+        if (ratings == null || ratings.length == 0) {
+            return 0;
+        }
+
+        int result = 1;
+        int upCnt = 1;
+        int downCnt = 0;
+        int peak = 0;
+
+        for (int i = 1; i < ratings.length; i++) {
+            if (ratings[i] > ratings[i - 1]) {
+                upCnt++;
+                peak = upCnt;
+                downCnt = 0;
+                result += upCnt;
+            } else if (ratings[i] == ratings[i - 1]) {
+                upCnt = 1;
+                downCnt = 0;
+                peak = 0;
+                result += 1;
+            } else {
+                downCnt++;
+                upCnt = 1;
+                result += downCnt;
+
+                if (peak <= downCnt) {
+                    result += 1;
+                }
+            }
+        }
+        return result;
     }
 
     public static void main(String[] args) {
