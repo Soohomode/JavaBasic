@@ -59,7 +59,7 @@ public class Mini_06 {
                 System.out.printf("\n[투표진행률]: %.2f%%, %d명 투표 => %s\n", progress, voteCount, randomCandidate.name);
                 for (Candidate candidate : candidates) {
                     double percentage = ((double) candidate.votes / (double) (voteCount)) * 100;
-                    System.out.printf("[%s] %s:\t %.2f%%\t(투표수: %d)\n", candidate.symbol, candidate.name, percentage, candidate.votes);
+                    System.out.printf("[%s] %6s:\t %.2f%%\t(투표수: %d)\n", candidate.symbol, candidate.name, percentage, candidate.votes);
                 }
             }
         }

@@ -13,8 +13,12 @@ public class GgamJjak_01 {
                 , "5. 종료"
         };
 
-        for (int i = 0; i < menuList.length; i++) {
-            System.out.println(menuList[i]);
+//        for (int i = 0; i < menuList.length; i++) {
+//            System.out.println(menuList[i]);
+//        }
+
+        for (String menu : menuList) {
+            System.out.println(menu);
         }
 
     }
@@ -61,6 +65,7 @@ public class GgamJjak_01 {
 
             selectMenu(check);
 
-        } while (check != 5);
+        } while (check != 5); // check가 5가 되면 false가되기때문에 반복문 종료
+        ;
     }
 }
