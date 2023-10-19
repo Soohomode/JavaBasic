@@ -1,4 +1,3 @@
-
 public class Practice5 {
     public static int solution(int[] ratings) {
 

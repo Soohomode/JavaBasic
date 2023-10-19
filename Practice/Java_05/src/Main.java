@@ -105,6 +105,21 @@ public class Main {
             }
             System.out.println();
         }
+        double one = 1;
+        double two = 2;
+        double res1 = one % two;
+        System.out.println(res1); // 1 % 2가 1인 이유는, 1을 2로 나누지 못해 몫이 없어서, 1 그대로가 남기 때문에
+
+
+        for (int j = 0; j < 8; j++) {
+            if (j % 2 == 0) {
+                continue;
+            }
+            for (int k = 0; k < j; k++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
 
 
 //      Q2. 반복문을 실행할 때마다 물 온도를 1도씩 올리고 100도가 되면 종료한다.
